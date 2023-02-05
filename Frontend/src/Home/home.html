@@ -43,11 +43,21 @@
     </nav>
     <div
       class="container d-flex flex-column align-items-center justify-content-center mt-5"
+      style="overflow-y: scroll; height: 75vh"
     >
       <div class="container-fluid text-center notify">You Joined!</div>
       <div class="container-fluid text-center notify">User 2 Joined!</div>
       <div class="container-fluid text-center notify">User 2: Hello!</div>
     </div>
-    <script src="../../dist/Login/login.js"></script>
+    <div class="container mt-2 d-flex align-items-center">
+      <input
+        type="text"
+        class="form-control"
+        id="message"
+        placeholder="Enter your message"
+      />
+      <button type="submit" class="btn" id="submit">Send</button>
+    </div>
+    <script src="../../dist/Home/home.js"></script>
   </body>
 </html>

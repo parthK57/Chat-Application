@@ -18,9 +18,11 @@ app.use(cors());
 // Routes
 import signUpRoute from "./routes/users";
 import logninRoute from "./routes/users";
+import sendMessageRoute from "./routes/messages";
 
 app.use(signUpRoute);
 app.use(logninRoute);
+app.use(sendMessageRoute);
 
 // Error handler
 app.use((err: ErrorHandler, req: any, res: any, next: any) => {

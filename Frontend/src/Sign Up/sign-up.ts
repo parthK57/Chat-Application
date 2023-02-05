@@ -1,3 +1,4 @@
+// @ts-expect-error
 const btn = document.querySelector("#submit__signUp") as HTMLButtonElement;
 
 // @ts-expect-error
