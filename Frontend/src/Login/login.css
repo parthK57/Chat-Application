@@ -30,11 +30,26 @@ body {
   background-size: cover;
 }
 
-#submit__signUp {
+#submit {
   background-color: #062773;
+  color: white;
+}
+
+#submit:hover {
+  background-color: #0737a6;
   color: white;
 }
 
 .active {
   font-weight: 600;
+}
+
+#signUp {
+  background-color: #062773;
+  color: white;
+}
+
+#signUp:hover {
+  background-color: #0737a6;
+  color: white;
 }
