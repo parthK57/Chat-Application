@@ -24,7 +24,7 @@ export const sendMessageHandler = async (req: any, res: any, next: any) => {
     [email, message, timestamp],
     (err: Error, results: any) => {
       if (err) return next(new ErrorHandler(err.message, 500));
-      else res.status(200).send("RECEIVED");
+      else res.status(201).json({ message: "RECIEVED" });
     }
   );
 };

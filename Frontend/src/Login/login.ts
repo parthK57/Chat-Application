@@ -32,7 +32,7 @@ async function loginUser(event: any) {
         body.removeChild(notify);
         sessionStorage.setItem("email", `${email}`);
         sessionStorage.setItem("password", `${password}`);
-        window.location.href = "http://127.0.0.1:5500/Frontend/home.html";
+        window.location.href = "http://127.0.0.1:5500/Frontend/src/Home/home.html";
       }, 500);
     }
   } catch (error) {
