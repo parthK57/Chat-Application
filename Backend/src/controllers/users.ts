@@ -25,3 +25,7 @@ export const signUpHandler = async (req: any, res: any, next: any) => {
     }
   );
 };
+
+export const loginHandler = async (req: any, res: any, next: any) => {
+  res.status(200).send("Ok");
+};
