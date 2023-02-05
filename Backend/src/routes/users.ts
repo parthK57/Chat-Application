@@ -6,6 +6,6 @@ const router = Router();
 import {signUpHandler} from "../controllers/users";
 
 // Routing
-router.use("/register", signUpHandler);
+router.use("/users/register", signUpHandler);
 
 export default router;

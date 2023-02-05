@@ -8,7 +8,7 @@ export const signUpHandler = async (req: any, res: any, next: any) => {
   const body: Body = req.body;
   const username = body.username;
   const email = body.email;
-  const phonenumber: number = parseInt(body.phonenumber);
+  const phonenumber = parseInt(body.phonenumber);
   const password = body.password;
 
   const hashedPassword = await bcrypt.hash(password, 10);
