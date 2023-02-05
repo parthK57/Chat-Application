@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import connectionPool from "../database/db";
+import ErrorHandler from "./ErrorHandler";
 
 const db = connectionPool;
 
@@ -21,11 +22,16 @@ const PasswordVerifier = async (req: any, res: any, next: any) => {
       if (err) {
         return next(err);
       } else {
-        const hashedPassword = results[0].password;
-        bcrypt.compare(password, hashedPassword, (err, results) => {
-          if (err) return next(err);
-          else if (results) next();
-        });
+        if (results.length == 0)
+          return next(new ErrorHandler("User not registered!", 404));
+        else {
+          const hashedPassword = results[0].password;
+          bcrypt.compare(password, hashedPassword, (err, results) => {
+            if (err) return next(err);
+            else if (results) next();
+            else next(new ErrorHandler("Unauthorized!", 401));
+          });
+        }
       }
     }
   );

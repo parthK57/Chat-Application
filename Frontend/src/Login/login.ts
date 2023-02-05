@@ -1,7 +1,9 @@
 const loginBtn = document.querySelector("#submit") as HTMLButtonElement;
 
-const loginUser = async (e) => {
-  e.preventDefault();
+loginBtn.addEventListener("click", loginUser);
+
+async function loginUser(event: any) {
+  event.preventDefault();
   try {
     const emailElement = document.querySelector("#email") as HTMLInputElement;
     const passwordElement = document.querySelector(
@@ -10,7 +12,10 @@ const loginUser = async (e) => {
 
     const email = emailElement.value;
     const password = passwordElement.value;
-    const resp = await axios.post("https://localhost:5000/users/login", {
+    console.log(email, password);
+
+    // @ts-expect-error
+    const resp = await axios.post("http://localhost:5000/users/login", {
       email: email,
       password: password,
     });
@@ -19,7 +24,7 @@ const loginUser = async (e) => {
       const notify = document.createElement("div");
       const body = document.querySelector("body") as HTMLBodyElement;
       notify.className =
-        "container d-flex justify-content-center align-content-center success-notify";
+        "container d-flex justify-content-center align-content-center notify";
       notify.innerText = "Logging In";
 
       body.appendChild(notify);
@@ -33,4 +38,4 @@ const loginUser = async (e) => {
   } catch (error) {
     console.log(error);
   }
-};
+}

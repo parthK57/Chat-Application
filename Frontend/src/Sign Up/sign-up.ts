@@ -1,5 +1,6 @@
 const btn = document.querySelector("#submit__signUp") as HTMLButtonElement;
 
+// @ts-expect-error
 const registerUser = async (e) => {
   e.preventDefault();
   const usernameElement = document.querySelector(
@@ -18,6 +19,7 @@ const registerUser = async (e) => {
   const phoneNumber: string = phoneNumberElement.value;
   const password: string = passwordElement.value;
   console.log(email);
+  // @ts-expect-error
   const resp = await axios.post("http://localhost:5000/users/register", {
     username: username,
     email: email,
