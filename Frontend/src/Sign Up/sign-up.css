@@ -1,0 +1,36 @@
+#navbar {
+  background-color: #062773;
+  box-shadow: 10px 21px 56px -8px rgb(62, 62, 62);
+}
+
+a{
+  color: white !important;
+}
+
+form {
+  color: #1c2321 !important;
+  border-radius: 25px;
+  background-color: #faf1d6;
+  box-shadow: 10px 21px 56px -8px rgb(50, 50, 50);
+  width: 350px;
+}
+
+@media screen and (min-width: 990px) {
+  .navbar-nav {
+    width: 100% !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/collection-social-media-monochromatic-doodles_79603-1753.jpg?w=1060&t=st=1675574734~exp=1675575334~hmac=96f69d14a28f770ca99688fb7680eca3d0a0d7d8c88001815dadd2cce270ef97");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#submit__signUp{
+  background-color: #062773;
+  color: white;
+}
