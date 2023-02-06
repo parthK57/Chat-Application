@@ -1,6 +1,6 @@
 #navbar {
   background-color: #062773;
-  box-shadow: 10px 21px 56px -8px rgb(62, 62, 62);
+  /* box-shadow: 10px 21px 56px -8px rgb(62, 62, 62); */
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 body {
   background-image: url("https://img.freepik.com/free-vector/collection-social-media-monochromatic-doodles_79603-1753.jpg?w=1060&t=st=1675574734~exp=1675575334~hmac=96f69d14a28f770ca99688fb7680eca3d0a0d7d8c88001815dadd2cce270ef97");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 #submit {
@@ -56,4 +56,91 @@ body {
   margin-top: 10px;
   font-size: 18px;
   width: 50%;
+}
+
+#chats-block {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-right: 1px solid black;
+  border-radius: 10px 10px 0px 10px;
+  padding: 0px;
+  font-weight: 600;
+  font-size: 20px;
+  overflow-x: scroll;
+  margin-left: 20px;
+}
+
+#chats-title-container {
+  border-bottom: 1px solid black;
+  background-color: rgba(115, 134, 255, 0.85);
+  border-radius: 10px 10px 0px 0px;
+  width: 100% !important;
+  padding: 8px;
+}
+
+#users-container {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.user-container {
+  display: flex;
+  padding: 10px;
+  margin-top: 5px;
+  border-bottom: 1px solid rgb(5, 5, 5, 0.3);
+}
+
+#message-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px 10px 0px 10px;
+  padding: 0px;
+}
+.message-container-title {
+  display: flex;
+  padding: 5px;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid rgb(5, 5, 5, 0.3);
+  background-color: rgba(115, 134, 255, 0.85);
+}
+
+.chatbox {
+  overflow-y: scroll;
+}
+
+.chatbox-user-name {
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.chat-toolbox {
+  border-top: 1px solid rgb(5, 5, 5, 0.3);
+}
+
+#message-input-box {
+  width: 92%;
+}
+
+.message {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(231, 231, 231);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.message-user {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #062773;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
 }

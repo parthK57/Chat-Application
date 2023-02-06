@@ -31,26 +31,28 @@ async function sendMsg(event: any) {
   }
 }
 
-async function getMsg() {
-  // @ts-expect-error
-  const resp = await axios.post("http://localhost:5000/message/getmessage", {
-    email: email,
-    password: password,
-  });
-  const data = resp.data;
-  if (resp.status === 200) {
-    const messageContainer = document.querySelector(
-      "#message-container"
-    ) as HTMLDivElement;
-    for (let i = 0; i < data.length; i++) {
-      const notify = document.createElement("div");
-      notify.className = "container-fluid text-center notify";
-      const email = data[i].email;
-      const message = data[i].message;
-      notify.innerText = `${email}: ${message}`;
+function getMsg() {
+  setInterval(async () => {
+    // @ts-expect-error
+    const resp = await axios.post("http://localhost:5000/message/getmessage", {
+      email: email,
+      password: password,
+    });
+    const data = resp.data;
+    if (resp.status === 200) {
+      const messageContainer = document.querySelector(
+        "#message-container"
+      ) as HTMLDivElement;
+      for (let i = 0; i < data.length; i++) {
+        const notify = document.createElement("div");
+        notify.className = "container-fluid text-center notify";
+        const email = data[i].email;
+        const message = data[i].message;
+        notify.innerText = `${email}: ${message}`;
 
-      messageContainer.appendChild(notify);
+        messageContainer.appendChild(notify);
+      }
     }
-  }
+  }, 1000);
 }
 getMsg();
