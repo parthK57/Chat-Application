@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import dotenv from "dotenv";
 import ErrorHandler from "./Services/ErrorHandler";
+import dotenv from "dotenv";
 
 dotenv.config({
   path: "../.env",
@@ -21,10 +21,12 @@ app.use(cors());
 import signUpRoute from "./routes/users";
 import logninRoute from "./routes/users";
 import sendMessageRoute from "./routes/messages";
+import getMessageRoute from "./routes/messages";
 
 app.use(signUpRoute);
 app.use(logninRoute);
 app.use(sendMessageRoute);
+app.use(getMessageRoute);
 
 // Error handler
 app.use((err: ErrorHandler, req: any, res: any, next: any) => {

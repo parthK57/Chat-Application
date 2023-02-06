@@ -28,3 +28,13 @@ export const sendMessageHandler = async (req: any, res: any, next: any) => {
     }
   );
 };
+
+export const getMessageHandler = async (req: any, res: any, next: any) => {
+  // @ts-expect-error
+  db.execute("SELECT * FROM messages;", (err, results) => {
+    if (err) return next(new ErrorHandler(err.message, 500));
+    else {
+      res.status(200).send(results);
+    }
+  });
+};
