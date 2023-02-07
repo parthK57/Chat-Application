@@ -32,7 +32,6 @@ app.use(getMessageRoute);
 app.use((err: ErrorHandler, req: any, res: any, next: any) => {
   const errMsg = err.message || "Server Error!";
   const statusCode = err.statusCode || 500;
-
   res.status(statusCode).send(errMsg);
 });
 
